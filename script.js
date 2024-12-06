@@ -53,7 +53,7 @@ let config = {
 
 let audioType = "";
 
-let volume = 0;
+let volume = 80;
 
 const audioTypes = ["noise"];
 
@@ -284,7 +284,7 @@ if (localStorage.getItem("pomo-audio-type")) {
 }
 
 if (localStorage.getItem("pomo-audio-volume")) {
-	volume = parseFloat(localStorage.getItem("pomo-audio-volume")) || 0;
+	volume = parseFloat(localStorage.getItem("pomo-audio-volume")) || 80;
 }
 
 volumeSliderDisplay();
