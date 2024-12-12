@@ -79,7 +79,7 @@ function setTime() {
 		":" +
 		(seconds % 60).toString().padStart(2, "0");
 	timediv.innerText = timestr;
-	document.title = `${timestr} ${fullname[roundInfo.current]} - Tomodoro`;
+	document.title = `${timestr} ${fullname[roundInfo.current]} - Pomero`;
 	progress.style.strokeDashoffset = (roundInfo.t / config[roundInfo.current]) * 100;
 	if (pipActive) loop();
 }
@@ -601,7 +601,7 @@ document.getElementById("create-backup").addEventListener("click", () => {
 		let url = URL.createObjectURL(blob);
 		let link = document.createElement("a");
 		link.href = url;
-		link.download = "tomodorobackup.json";
+		link.download = "pomerobackup.json";
 		link.click();
 		setTimeout(() => URL.revokeObjectURL(url), 1000);
 	};
